@@ -55,6 +55,7 @@ function update() {
 }
 
 function paint() {
+    ctx.clearRect(0, 0, w, h);
     ctx.globalCompositeOperation = 'source-over';
     ctx.fillStyle = "rgba(0,0,0,0.2)";
     ctx.fillRect(0, 0, w, h);

@@ -7,47 +7,55 @@ body {
     height: 100vh;
     background: url('background.jpg') no-repeat center center;
     background-size: cover;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     overflow: hidden;
     position: relative;
 }
 
+/* Surat (Tampilan Awal) */
 .letter-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;  /* Memastikan container memiliki posisi relatif */
     width: 100%;
     height: 100%;
     text-align: center;
     z-index: 3;
 }
 
+/* Surat style */
 .letter {
-    background: rgba(255, 255, 255, 0.85); 
+    background: #ffffffe1;
     padding: 20px;
     width: 300px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 10px rgba(39, 39, 39, 0.411);
     border-radius: 10px;
-    text-align: center;
-    font-size: 18px;
+    position: relative; 
+    z-index: 2; 
 }
 
+/* Round Image */
 .round-image {
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 10px;
+    background-color: white;
     display: inline-block;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: -130px; /* Gambar akan berada di atas container surat */
+    left: 50%; /* Menempatkan gambar di tengah secara horizontal */
+    transform: translateX(-50%); /* Menggeser gambar setengah lebar dari gambar itu sendiri untuk memastikan tengah */
+    z-index: 4; /* Pastikan gambar berada di atas container surat */
 }
 
 .round-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    object-position: center; 
+    object-fit: cover;
+    object-position: center;
 }
 
 button {
@@ -70,7 +78,6 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffefd5;
     z-index: 2;
     width: 100%;
     height: 100%;
@@ -80,16 +87,16 @@ button:hover {
 }
 
 .message {
-    background: rgba(110, 103, 103, 0.596); 
+    background: #ffffffe1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
     width: 80%;
     max-width: 500px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     text-align: center;
     position: relative;
     z-index: 3;
-        color: white; 
+    color: #3d3d3d;
 }
 
 canvas {
@@ -98,6 +105,7 @@ canvas {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 1;  /* Pastikan canvas berada di bawah konten */
     pointer-events: none;
+    background: transparent; /* Membuat canvas punya background transparan */
 }
