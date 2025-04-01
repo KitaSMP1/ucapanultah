@@ -12,19 +12,17 @@ body {
     position: relative;
 }
 
-/* Surat (Tampilan Awal) */
 .letter-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;  /* Memastikan container memiliki posisi relatif */
+    position: relative;  
     width: 100%;
     height: 100%;
     text-align: center;
     z-index: 3;
 }
 
-/* Surat style */
 .letter {
     background: #ffffffe1;
     padding: 20px;
@@ -35,7 +33,6 @@ body {
     z-index: 2; 
 }
 
-/* Round Image */
 .round-image {
     width: 120px;
     height: 120px;
@@ -45,10 +42,10 @@ body {
     display: inline-block;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     position: absolute;
-    top: -130px; /* Gambar akan berada di atas container surat */
-    left: 50%; /* Menempatkan gambar di tengah secara horizontal */
-    transform: translateX(-50%); /* Menggeser gambar setengah lebar dari gambar itu sendiri untuk memastikan tengah */
-    z-index: 4; /* Pastikan gambar berada di atas container surat */
+    top: -130px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 4; 
 }
 
 .round-image img {
@@ -84,19 +81,25 @@ button:hover {
     position: absolute;
     top: 0;
     left: 0;
+    transform: scale(0.88); 
+    transform-origin: center; 
 }
 
 .message {
     background: #ffffffe1;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
     width: 80%;
     max-width: 500px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+    /*color: rgba(0, 0, 0, 0.788);*/
     text-align: center;
     position: relative;
     z-index: 3;
-    color: #3d3d3d;
+    transform: scale(0.88); 
+}
+.message h1 {
+    color: #e04e4e;
 }
 
 canvas {
@@ -105,7 +108,7 @@ canvas {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;  /* Pastikan canvas berada di bawah konten */
+    z-index: 1;  
     pointer-events: none;
-    background: transparent; /* Membuat canvas punya background transparan */
+    background: transparent;
 }
